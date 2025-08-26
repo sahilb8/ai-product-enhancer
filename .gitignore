@@ -9,7 +9,9 @@
 /python-ai-service/venv/
 /python-ai-service/env/
 /python-ai-service/.venv/
-/python-ai-service/.env/
+/python-ai-service/.env
+/python-ai-service/data/flipkart_reviews.csv
+/python-ai-service/db
 
 # -----------------
 # Python Cache & Artifacts
