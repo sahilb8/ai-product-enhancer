@@ -24,4 +24,27 @@ export class ProductContoller {
       res.sendStatus(500);
     }
   };
+
+  getProductQueryAnswered = async (req: Request, res: Response) => {
+    try {
+      const { productQuery } = req.body;
+      if (!productQuery) {
+        return res.status(400).send({ error: 'productQuery is required' });
+      }
+      const productService = new ProductService();
+      const productDescription =
+        await productService.getProductQueryAnswered(productQuery);
+      res.status(200).send(productDescription);
+    } catch (error: unknown) {
+      // Log unexpected errors at 'error' level with details of the request
+      console.error(
+        `Error in ProductContoller (getProductQueryAnswered). Input: req.body=${JSON.stringify(
+          req.body,
+        )}.`,
+        error,
+      );
+      // Send generic error response
+      res.sendStatus(500);
+    }
+  };
 }
