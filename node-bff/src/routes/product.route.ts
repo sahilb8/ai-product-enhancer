@@ -9,4 +9,9 @@ router.post(
   productContoller.getProductDescription,
 );
 
+router.post(
+  '/product/answer-product-query',
+  productContoller.getProductQueryAnswered,
+);
+
 export { router as productRouter };

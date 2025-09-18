@@ -16,7 +16,7 @@ if not OPENAI_API_KEY:
 LLM_API_URL = os.getenv("LLM_API_URL")
 
 # --- Project Constants ---
-CHROMA_DB_PATH = "db"
+CHROMA_DB_LANGCHAIN_PATH = "db"
 LOCAL_EMBEDDING_MODEL = "all-MiniLM-L6-v2" 
 COLLECTION_NAME = "product_reviews"
 SOURCE_DATA_PATH = "data/flipkart_reviews.csv"
